@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serviços de Informática</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { cursor: crosshair; }
+
+  body {
+    background: #f4f1ea;
+    color: #1a1a1a;
+    font-family: Georgia, 'Times New Roman', serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* fundo com textura de papel + rabiscos */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(200,180,140,0.15) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(180,160,120,0.12) 0%, transparent 45%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* conteúdo espalhado, nada alinhado */
+  .caos {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .bloco {
+    position: absolute;
+    line-height: 1.4;
+  }
+
+  /* título principal jogado no canto inferior esquerdo, rotacionado */
+  .titulo {
+    left: 4vw;
+    bottom: 6vh;
+    font-size: clamp(1.8rem, 5.5vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -1px;
+    transform: rotate(-2.5deg);
+    max-width: 60vw;
+    border-bottom: 3px solid #1a1a1a;
+    padding-bottom: 0.2rem;
+  }
+
+  /* subtítulo vertical no lado direito */
+  .sub {
+    right: 2vw;
+    top: 10vh;
+    writing-mode: vertical-rl;
+    font-size: clamp(0.9rem, 1.6vw, 1.3rem);
+    font-style: italic;
+    letter-spacing: 0.15em;
+    color: #555;
+    transform: rotate(180deg);
+  }
+
+  /* endereço solto no topo esquerdo, pequeno, sem destaque */
+  .url {
+    left: 4vw;
+    top: 5vh;
+    font-size: 0.75rem;
+    font-family: 'Courier New', monospace;
+    color: #777;
+    transform: rotate(1deg);
+  }
+  .url::after { content: " ✎"; }
+
+  /* frase solta, torta, no meio-direita */
+  .frase {
+    right: 12vw;
+    top: 45vh;
+    font-size: clamp(1rem, 2.2vw, 1.6rem);
+    font-family: Georgia, serif;
+    color: #1a1a1a;
+    transform: rotate(4deg);
+    max-width: 28ch;
+    border: 1px dashed #999;
+    padding: 0.6rem 1rem;
+    background: rgba(255,255,255,0.4);
+  }
+
+  /* bloco decorativo tipo anotação de caderno, canto inferior direito */
+  .nota {
+    right: 6vw;
+    bottom: 8vh;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #444;
+    transform: rotate(-3deg);
+    line-height: 1.6;
+  }
+  .nota::before { content: "// "; color: #a00; }
+
+  /* linha rabiscada atravessando a tela */
+  .risco {
+    position: absolute;
+    left: -5vw;
+    top: 30vh;
+    width: 110vw;
+    height: 2px;
+    background: #1a1a1a;
+    transform: rotate(8deg);
+    z-index: 0;
+    opacity: 0.7;
+  }
+  .risco.dois {
+    top: 70vh;
+    transform: rotate(-5deg);
+    opacity: 0.5;
+    height: 1px;
+  }
+
+  /* seta desenhada apontando pra lugar nenhum */
+  .seta {
+    position: absolute;
+    left: 30vw;
+    top: 20vh;
+    font-size: 2.5rem;
+    transform: rotate(35deg);
+    color: #a00;
+    z-index: 1;
+    opacity: 0.8;
+  }
+
+  /* círculo rabiscado isolado */
+  .circulo {
+    position: absolute;
+    left: 45vw;
+    top: 55vh;
+    width: 120px;
+    height: 120px;
+    border: 2px solid #1a1a1a;
+    border-radius: 50%;
+    transform: rotate(12deg) scaleX(1.1);
+    opacity: 0.6;
+  }
+  .circulo::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border: 1px solid #1a1a1a;
+    border-radius: 50%;
+    transform: rotate(-8deg);
+  }
+
+  /* cursor piscante estilo terminal, perdido no canto */
+  .cursor {
+    position: absolute;
+    left: 4vw;
+    bottom: 3vh;
+    width: 10px;
+    height: 1.2rem;
+    background: #1a1a1a;
+    animation: blink 1.2s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* pequeno manifesto em letra minúscula no canto, quase escondido */
+  .manifesto {
+    left: 4vw;
+    top: 15vh;
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    color: #999;
+    max-width: 22ch;
+    line-height: 1.5;
+    transform: rotate(-1deg);
+  }
+
+  /* mobile: vira fluxo normal pra não quebrar tudo */
+  @media (max-width: 700px) {
+    .bloco { position: relative; inset: auto; margin: 0 0 2rem 0; transform: none; writing-mode: horizontal-tb; }
+    .caos { padding: 2rem; display: flex; flex-direction: column; }
+    .risco, .seta, .circulo { display: none; }
+    .titulo { max-width: 100%; }
+    .sub { writing-mode: horizontal-tb; }
+  }
+</style>
+</head>
+<body>
+  <div class="caos">
+
+    <div class="risco"></div>
+    <div class="risco dois"></div>
+
+    <div class="bloco url">www.servicosdeinformatica.com.br</div>
+
+    <div class="bloco manifesto">
+      este site não segue<br>
+      o manual. nem o<br>
+      bom senso visual.<br>
+      — e é de propósito.
+    </div>
+
+    <div class="bloco titulo">Serviços de<br>Informática</div>
+
+    <div class="bloco sub">soluções fora do comum</div>
+
+    <div class="seta">↗</div>
+
+    <div class="circulo"></div>
+
+    <div class="bloco frase">
+      se todo mundo faz igual,<br>
+      o diferente é o serviço.
+    </div>
+
+    <div class="bloco nota">
+      [ em construção ]<br>
+      edite este caos depois
+    </div>
+
+    <div class="cursor"></div>
+
+  </div>
+</body>
+</html>
