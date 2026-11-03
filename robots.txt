@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.servicosdeinformatica.com.br/sitemap.xml
+Sitemap: https://www.servicodeinformatica.com.br/sitemap.xml
