@@ -167,7 +167,7 @@
     background: rgba(255,255,255,0.4);
   }
 
-  /* Bloco à direita, substituindo o antigo "em construção" */
+  /* Bloco à direita */
   .nota {
     right: 6vw;
     bottom: 8vh;
@@ -239,22 +239,11 @@
   }
   @keyframes blink { 50% { opacity: 0; } }
 
-  .manifesto {
-    left: 4vw;
-    top: 15vh;
-    font-family: 'Courier New', monospace;
-    font-size: 0.65rem;
-    color: #999;
-    max-width: 22ch;
-    line-height: 1.5;
-    transform: rotate(-1deg);
-  }
-
   /* Conteúdo SEO visível e indexável */
   .conteudo-seo {
     position: absolute;
     left: 4vw;
-    top: 55vh;
+    top: 15vh; /* Subiu para ocupar o espaço do manifesto removido */
     max-width: 35ch;
     font-size: 0.8rem;
     color: #666;
@@ -299,13 +288,6 @@
     <!-- E-mail como link clicável, solto no canto superior direito -->
     <a href="mailto:servicodeinfo@proton.me" class="bloco email">servicodeinfo@proton.me</a>
 
-    <div class="bloco manifesto">
-      este site não segue<br>
-      o manual. nem o<br>
-      bom senso visual.<br>
-      — e é de propósito.
-    </div>
-
     <!-- H1 único, texto real, palavra-chave principal -->
     <h1 class="bloco titulo">Serviço de<br>Informática</h1>
 
@@ -320,12 +302,11 @@
       o diferente é o serviço.
     </div>
 
-    <!-- Conteúdo textual atualizado -->
+    <!-- Conteúdo textual atualizado e reposicionado -->
     <div class="conteudo-seo">
       Soluções em informática que fogem do padrão. Atendimento técnico remoto, especializado para quem busca serviços de Informática. Atendemos todo o Brasil.
     </div>
 
-    <!-- Bloco "nota" substituído para não parecer inacabado -->
     <div class="bloco nota">
       sem templates.<br>
       sem fórmulas prontas.
