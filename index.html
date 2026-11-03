@@ -3,7 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Serviços de Informática</title>
+
+<!-- SEO básico agressivo -->
+<title>Serviços de Informática | Soluções e Serviços Fora do Comum</title>
+<meta name="description" content="Serviços de Informática fora do comum. Soluções técnicas e de TI que fogem do padrão e do conhecimento do grande público. Atendimento remoto em todo o Brasil.">
+<meta name="keywords" content="serviços de informática, soluções em TI, assistência técnica remota, informática fora do comum, serviços técnicos, soluções tecnológicas, atendimento remoto Brasil">
+<meta name="author" content="Serviços de Informática">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://www.servicosdeinformatica.com.br/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.servicosdeinformatica.com.br/">
+<meta property="og:title" content="Serviços de Informática | Soluções Fora do Comum">
+<meta property="og:description" content="Soluções em informática que fogem do padrão. Atendimento remoto em todo o Brasil.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Serviços de Informática">
+<meta property="og:image" content="https://www.servicosdeinformatica.com.br/logo.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Serviços de Informática | Soluções Fora do Comum">
+<meta name="twitter:description" content="Soluções em informática que fogem do padrão. Atendimento remoto em todo o Brasil.">
+<meta name="twitter:image" content="https://www.servicosdeinformatica.com.br/logo.jpg">
+
+<!-- Dados estruturados: ProfessionalService (remoto, sem endereço físico) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Serviços de Informática",
+  "description": "Serviços e soluções em informática fora do comum, fugindo do padrão e do conhecimento do grande público. Atendimento remoto em todo o Brasil.",
+  "url": "https://www.servicosdeinformatica.com.br/",
+  "image": "https://www.servicosdeinformatica.com.br/logo.jpg",
+  "email": "servicodeinfo@proton.me",
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "servicodeinfo@proton.me",
+    "availableLanguage": "Portuguese"
+  },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "https://www.servicosdeinformatica.com.br/",
+    "serviceLocation": {
+      "@type": "VirtualLocation",
+      "url": "https://www.servicosdeinformatica.com.br/"
+    }
+  },
+  "knowsAbout": [
+    "Serviços de informática",
+    "Soluções em TI",
+    "Assistência técnica remota",
+    "Soluções tecnológicas fora do padrão"
+  ]
+}
+</script>
+
+<!-- Dados estruturados: WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Serviços de Informática",
+  "url": "https://www.servicosdeinformatica.com.br/"
+}
+</script>
+
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -18,7 +89,6 @@
     position: relative;
   }
 
-  /* fundo com textura de papel + rabiscos */
   body::before {
     content: "";
     position: fixed;
@@ -30,7 +100,6 @@
     z-index: 0;
   }
 
-  /* conteúdo espalhado, nada alinhado */
   .caos {
     position: relative;
     z-index: 1;
@@ -43,7 +112,7 @@
     line-height: 1.4;
   }
 
-  /* título principal jogado no canto inferior esquerdo, rotacionado */
+  /* TÍTULO PRINCIPAL — único H1 da página */
   .titulo {
     left: 4vw;
     bottom: 6vh;
@@ -56,7 +125,6 @@
     padding-bottom: 0.2rem;
   }
 
-  /* subtítulo vertical no lado direito */
   .sub {
     right: 2vw;
     top: 10vh;
@@ -68,7 +136,6 @@
     transform: rotate(180deg);
   }
 
-  /* endereço solto no topo esquerdo, pequeno, sem destaque */
   .url {
     left: 4vw;
     top: 5vh;
@@ -79,7 +146,7 @@
   }
   .url::after { content: " ✎"; }
 
-  /* frase solta, torta, no meio-direita */
+  /* Texto real com keywords naturais */
   .frase {
     right: 12vw;
     top: 45vh;
@@ -93,7 +160,6 @@
     background: rgba(255,255,255,0.4);
   }
 
-  /* bloco decorativo tipo anotação de caderno, canto inferior direito */
   .nota {
     right: 6vw;
     bottom: 8vh;
@@ -105,7 +171,6 @@
   }
   .nota::before { content: "// "; color: #a00; }
 
-  /* linha rabiscada atravessando a tela */
   .risco {
     position: absolute;
     left: -5vw;
@@ -124,7 +189,6 @@
     height: 1px;
   }
 
-  /* seta desenhada apontando pra lugar nenhum */
   .seta {
     position: absolute;
     left: 30vw;
@@ -136,7 +200,6 @@
     opacity: 0.8;
   }
 
-  /* círculo rabiscado isolado */
   .circulo {
     position: absolute;
     left: 45vw;
@@ -157,7 +220,6 @@
     transform: rotate(-8deg);
   }
 
-  /* cursor piscante estilo terminal, perdido no canto */
   .cursor {
     position: absolute;
     left: 4vw;
@@ -169,7 +231,6 @@
   }
   @keyframes blink { 50% { opacity: 0; } }
 
-  /* pequeno manifesto em letra minúscula no canto, quase escondido */
   .manifesto {
     left: 4vw;
     top: 15vh;
@@ -181,13 +242,41 @@
     transform: rotate(-1deg);
   }
 
-  /* mobile: vira fluxo normal pra não quebrar tudo */
+  /* Conteúdo SEO visível e indexável */
+  .conteudo-seo {
+    position: absolute;
+    left: 4vw;
+    top: 55vh;
+    max-width: 35ch;
+    font-size: 0.8rem;
+    color: #666;
+    transform: rotate(-0.5deg);
+    line-height: 1.6;
+  }
+
+  /* E-mail solto, torto, no canto superior direito */
+  .email {
+    right: 4vw;
+    top: 4vh;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #1a1a1a;
+    transform: rotate(-2deg);
+    text-decoration: none;
+    border-bottom: 1px dashed #a00;
+    padding-bottom: 2px;
+    z-index: 3;
+  }
+  .email::before { content: "✉ "; color: #a00; }
+  .email:hover { color: #a00; }
+
   @media (max-width: 700px) {
-    .bloco { position: relative; inset: auto; margin: 0 0 2rem 0; transform: none; writing-mode: horizontal-tb; }
+    .bloco, .conteudo-seo { position: relative; inset: auto; margin: 0 0 2rem 0; transform: none; writing-mode: horizontal-tb; }
     .caos { padding: 2rem; display: flex; flex-direction: column; }
     .risco, .seta, .circulo { display: none; }
     .titulo { max-width: 100%; }
     .sub { writing-mode: horizontal-tb; }
+    .email { position: relative; right: auto; top: auto; margin-bottom: 1rem; display: inline-block; }
   }
 </style>
 </head>
@@ -199,6 +288,9 @@
 
     <div class="bloco url">www.servicosdeinformatica.com.br</div>
 
+    <!-- E-mail como link clicável, solto no canto superior direito -->
+    <a href="mailto:servicodeinfo@proton.me" class="bloco email">servicodeinfo@proton.me</a>
+
     <div class="bloco manifesto">
       este site não segue<br>
       o manual. nem o<br>
@@ -206,7 +298,8 @@
       — e é de propósito.
     </div>
 
-    <div class="bloco titulo">Serviços de<br>Informática</div>
+    <!-- H1 único, texto real, palavra-chave principal -->
+    <h1 class="bloco titulo">Serviços de<br>Informática</h1>
 
     <div class="bloco sub">soluções fora do comum</div>
 
@@ -217,6 +310,11 @@
     <div class="bloco frase">
       se todo mundo faz igual,<br>
       o diferente é o serviço.
+    </div>
+
+    <!-- Conteúdo textual com keywords naturais -->
+    <div class="conteudo-seo">
+      Soluções em informática que fogem do padrão. Atendimento técnico remoto, especializado para quem busca serviços fora do comum e do conhecimento do grande público. Atendemos todo o Brasil.
     </div>
 
     <div class="bloco nota">
