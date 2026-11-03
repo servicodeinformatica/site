@@ -49,12 +49,20 @@
     "@type": "Country",
     "name": "Brasil"
   },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer service",
-    "email": "servicodeinfo@proton.me",
-    "availableLanguage": "Portuguese"
-  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "servicodeinfo@proton.me",
+      "availableLanguage": "Portuguese"
+    },
+    {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "url": "https://t.me/servicodeinformatica",
+      "availableLanguage": "Portuguese"
+    }
+  ],
   "availableChannel": {
     "@type": "ServiceChannel",
     "serviceUrl": "https://www.servicodeinformatica.com.br/",
@@ -134,7 +142,7 @@
     line-height: 1.4;
   }
 
-  /* TÍTULO PRINCIPAL — único H1 da página */
+  /* TÍTULO PRINCIPAL */
   .titulo {
     left: 4vw;
     bottom: 6vh;
@@ -168,7 +176,6 @@
   }
   .url::after { content: " ✎"; }
 
-  /* Texto real com keywords naturais */
   .frase {
     right: 12vw;
     top: 45vh;
@@ -242,7 +249,6 @@
   }
   @keyframes blink { 50% { opacity: 0; } }
 
-  /* Conteúdo SEO visível e indexável */
   .conteudo-seo {
     position: absolute;
     left: 4vw;
@@ -254,23 +260,36 @@
     line-height: 1.6;
   }
 
-  /* E-mail solto, torto, no canto superior direito */
-  .email {
+  /* Contatos no topo direito */
+  .contatos {
+    position: absolute;
     right: 4vw;
     top: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 3;
+  }
+
+  .email, .telegram {
     font-family: 'Courier New', monospace;
     font-size: 0.8rem;
     color: #1a1a1a;
-    transform: rotate(-2deg);
     text-decoration: none;
     border-bottom: 1px dashed #a00;
     padding-bottom: 2px;
-    z-index: 3;
   }
-  .email::before { content: "✉ "; color: #a00; }
-  .email:hover { color: #a00; }
 
-  /* NOVO: Link para o serviço de Proton Mail */
+  .email { transform: rotate(-2deg); }
+  .email::before { content: "✉ "; color: #a00; }
+
+  .telegram { transform: rotate(1.5deg); }
+  .telegram::before { content: "✈ "; color: #0088cc; }
+
+  .email:hover, .telegram:hover { color: #a00; }
+
+  /* Link para o serviço de Proton Mail */
   .link-servico {
     right: 4vw;
     bottom: 25vh;
@@ -296,12 +315,13 @@
   }
 
   @media (max-width: 700px) {
-    .bloco, .conteudo-seo, .link-servico { position: relative; inset: auto; margin: 0 0 2rem 0; transform: none; }
+    .bloco, .conteudo-seo, .link-servico, .contatos { position: relative; inset: auto; margin: 0 0 2rem 0; transform: none; }
     .caos { padding: 2rem; display: flex; flex-direction: column; }
     .risco, .seta, .circulo { display: none; }
     .titulo { max-width: 100%; }
     .sub { writing-mode: horizontal-tb; }
-    .email { display: inline-block; margin-bottom: 1rem; }
+    .contatos { align-items: flex-start; margin-bottom: 1rem; }
+    .email, .telegram { display: inline-block; }
     .link-servico { box-shadow: 4px 4px 0px #1a1a1a; text-align: center; }
   }
 </style>
@@ -314,10 +334,12 @@
 
     <div class="bloco url">www.servicodeinformatica.com.br</div>
 
-    <!-- E-mail como link clicável, solto no canto superior direito -->
-    <a href="mailto:servicodeinfo@proton.me" class="bloco email">servicodeinfo@proton.me</a>
+    <!-- Contatos agrupados no canto superior direito -->
+    <div class="bloco contatos">
+      <a href="mailto:servicodeinfo@proton.me" class="email">servicodeinfo@proton.me</a>
+      <a href="http://t.me/servicodeinformatica" target="_blank" rel="noopener noreferrer" class="telegram">t.me/servicodeinformatica</a>
+    </div>
 
-    <!-- H1 único, texto real, palavra-chave principal -->
     <h1 class="bloco titulo">Serviço de<br>Informática</h1>
 
     <div class="bloco sub">soluções fora do comum</div>
@@ -326,7 +348,6 @@
 
     <div class="circulo"></div>
 
-    <!-- NOVO: Link direto para o novo serviço -->
     <a href="criacao-email-proton.html" class="bloco link-servico">Criação de Conta de E-mail</a>
 
     <div class="bloco frase">
@@ -334,7 +355,6 @@
       o diferente é o serviço.
     </div>
 
-    <!-- Conteúdo textual atualizado com menção ao novo serviço -->
     <div class="conteudo-seo">
       Soluções em informática que fogem do padrão. Atendimento técnico remoto, especializado para quem busca serviços de Informática, incluindo criação de conta de e-mail Proton Mail. Atendemos todo o Brasil.
     </div>

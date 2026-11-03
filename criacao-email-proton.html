@@ -47,7 +47,21 @@
     "name": "Serviço de Informática",
     "url": "https://www.servicodeinformatica.com.br/",
     "image": "https://www.servicodeinformatica.com.br/logo.jpg",
-    "email": "servicodeinfo@proton.me"
+    "email": "servicodeinfo@proton.me",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "servicodeinfo@proton.me",
+        "availableLanguage": "Portuguese"
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://t.me/servicodeinformatica",
+        "availableLanguage": "Portuguese"
+      }
+    ]
   },
   "areaServed": {
     "@type": "Country",
@@ -70,7 +84,7 @@
   html { cursor: crosshair; }
 
   body {
-    background: #0d1117; /* Fundo escuro, remetendo a terminal/privacidade */
+    background: #0d1117;
     color: #c9d1d9;
     font-family: 'Courier New', Courier, monospace;
     min-height: 100vh;
@@ -78,7 +92,6 @@
     position: relative;
   }
 
-  /* Grade sutil de fundo estilo terminal */
   body::before {
     content: "";
     position: fixed;
@@ -103,7 +116,6 @@
     line-height: 1.5;
   }
 
-  /* Link de voltar no topo esquerdo */
   .voltar {
     left: 4vw;
     top: 5vh;
@@ -116,23 +128,42 @@
   .voltar::before { content: "< "; }
   .voltar:hover { color: #fff; border-color: #fff; }
 
-  /* URL solta no topo */
-  .url {
+  /* Contatos no topo direito */
+  .contatos {
+    position: absolute;
     right: 4vw;
     top: 5vh;
-    font-size: 0.75rem;
-    color: #8b949e;
-    transform: rotate(1deg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 3;
   }
 
-  /* Título Principal (H1) — Quebrando o padrão visual */
+  .email, .telegram {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #c9d1d9;
+    text-decoration: none;
+    border-bottom: 1px dashed #58a6ff;
+    padding-bottom: 2px;
+  }
+
+  .email { transform: rotate(-2deg); }
+  .email::before { content: "✉ "; color: #58a6ff; }
+
+  .telegram { transform: rotate(1.5deg); }
+  .telegram::before { content: "✈ "; color: #0088cc; }
+
+  .email:hover, .telegram:hover { color: #fff; border-color: #fff; }
+
   .titulo {
     left: 10vw;
     top: 20vh;
     font-size: clamp(1.8rem, 5vw, 4rem);
     font-weight: 900;
     text-transform: uppercase;
-    color: #58a6ff; /* Azul Proton */
+    color: #58a6ff;
     transform: rotate(1.5deg);
     max-width: 80vw;
     line-height: 1.1;
@@ -150,16 +181,14 @@
     text-shadow: none;
   }
 
-  /* Linha de código decorativa */
   .linha-codigo {
     left: 10vw;
     top: 40vh;
     font-size: 0.9rem;
-    color: #3fb950; /* Verde terminal */
+    color: #3fb950;
     transform: rotate(-0.5deg);
   }
 
-  /* Bloco de conteúdo textual */
   .texto {
     left: 10vw;
     top: 48vh;
@@ -173,7 +202,6 @@
 
   .texto p { margin-bottom: 1rem; }
 
-  /* Destaque no texto */
   .destaque {
     background: #58a6ff;
     color: #0d1117;
@@ -181,7 +209,6 @@
     font-weight: bold;
   }
 
-  /* Bloco de chamada para ação (CTA) — Discreto e torto */
   .cta {
     right: 10vw;
     bottom: 15vh;
@@ -191,7 +218,7 @@
     background: #161b22;
     border: 1px solid #30363d;
     padding: 1rem;
-    max-width: 30ch;
+    max-width: 35ch;
   }
   .cta p {
     margin-bottom: 0.5rem;
@@ -201,11 +228,12 @@
     color: #3fb950;
     text-decoration: none;
     border-bottom: 1px solid #3fb950;
+    display: block;
+    margin-bottom: 0.5rem;
   }
   .cta a::before { content: "> "; }
   .cta a:hover { background: #3fb950; color: #0d1117; }
 
-  /* Elemento gráfico (olho ou chave, representando privacidade) */
   .grafico {
     left: 60vw;
     top: 25vh;
@@ -216,7 +244,6 @@
     user-select: none;
   }
 
-  /* Cursor piscante no final do texto */
   .cursor {
     display: inline-block;
     width: 8px;
@@ -228,16 +255,16 @@
   }
   @keyframes blink { 50% { opacity: 0; } }
 
-  /* Responsivo: Telemóveis */
   @media (max-width: 700px) {
     .bloco { position: relative; inset: auto; margin: 0 0 2rem 0; transform: none; }
     .caos { padding: 2rem; display: flex; flex-direction: column; justify-content: center; min-height: 100vh; }
     .grafico { display: none; }
     .titulo { text-align: left; }
     .texto { font-size: 1rem; }
-    .cta { border-left: 4px solid #58a6ff; border-top: none; border-right: none; border-bottom: none; background: transparent; padding-left: 1rem; }
+    .cta { border-left: 4px solid #58a6ff; border-top: none; border-right: none; border-bottom: none; background: transparent; padding-left: 1rem; max-width: 100%; }
     .voltar { display: inline-block; margin-bottom: 1rem; }
-    .url { display: none; }
+    .contatos { position: relative; align-items: flex-start; right: auto; top: auto; margin-bottom: 1rem; }
+    .email, .telegram { display: inline-block; }
   }
 </style>
 </head>
@@ -246,23 +273,23 @@
 
     <a href="index.html" class="bloco voltar">voltar ao caos</a>
 
-    <div class="bloco url">servicodeinformatica.com.br/criacao-email-proton.html</div>
+    <!-- Contatos agrupados no canto superior direito -->
+    <div class="bloco contatos">
+      <a href="mailto:servicodeinfo@proton.me" class="email">servicodeinfo@proton.me</a>
+      <a href="http://t.me/servicodeinformatica" target="_blank" rel="noopener noreferrer" class="telegram">t.me/servicodeinformatica</a>
+    </div>
 
-    <!-- H1 Principal -->
     <h1 class="bloco titulo">
       Criação de Conta de E-mail
       <span>O guia definitivo para o Proton Mail, feito para quem não é técnico.</span>
     </h1>
 
-    <!-- Elemento gráfico decorativo -->
     <div class="bloco grafico">🔒</div>
 
-    <!-- Linha de código decorativa -->
     <div class="bloco linha-codigo">
       [root@servico-informatica ~]# iniciar_protocolo_seguranca
     </div>
 
-    <!-- Conteúdo real e otimizado para SEO -->
     <div class="bloco texto">
       <p>
         Você não precisa ser um especialista em tecnologia para ter um e-mail seguro. Se você é <span class="destaque">leigo no assunto</span> e quer criar sua conta gratuita no <strong>Proton Mail</strong> sem dor de cabeça, eu te ajudo do zero.
@@ -275,10 +302,10 @@
       </p>
     </div>
 
-    <!-- Chamada para ação (CTA) para entrar em contato -->
     <div class="bloco cta">
       <p>Pronto para ter um e-mail que é só seu?</p>
       <a href="mailto:servicodeinfo@proton.me?subject=Quero%20ajuda%20para%20criar%20minha%20conta%20no%20Proton%20Mail">enviar e-mail</a>
+      <a href="http://t.me/servicodeinformatica" target="_blank" rel="noopener noreferrer">chamar no telegram</a>
     </div>
 
   </div>
