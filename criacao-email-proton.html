@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FAVICON -->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- SEO básico agressivo -->
+<title>Criação de Conta de E-mail Proton Mail | Serviço de Informática</title>
+<meta name="description" content="Ajuda especializada para criar sua conta gratuita de e-mail no Proton Mail do zero. Atendimento passo a passo para pessoas leigas. Atendimento remoto em todo o Brasil.">
+<meta name="keywords" content="criação de conta de email, criar conta proton mail, ajuda proton mail, conta de email gratuita, segurança de email, proton mail passo a passo">
+<meta name="author" content="Serviço de Informática">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://www.servicodeinformatica.com.br/criacao-email-proton.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.servicodeinformatica.com.br/criacao-email-proton.html">
+<meta property="og:title" content="Criação de Conta de E-mail Proton Mail | Serviço de Informática">
+<meta property="og:description" content="Ajuda passo a passo para criar sua conta gratuita no Proton Mail. Ideal para quem não entende de tecnologia.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Serviço de Informática">
+<meta property="og:image" content="https://www.servicodeinformatica.com.br/logo.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Criação de Conta de E-mail Proton Mail | Serviço de Informática">
+<meta name="twitter:description" content="Ajuda passo a passo para criar sua conta gratuita no Proton Mail.">
+<meta name="twitter:image" content="https://www.servicodeinformatica.com.br/logo.jpg">
+
+<!-- Dados estruturados: Service -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Criação de Conta de E-mail",
+  "name": "Criação de Conta de E-mail Proton Mail",
+  "description": "Ajuda especializada e passo a passo para criar uma conta gratuita de e-mail no Proton Mail, voltada para pessoas leigas.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Serviço de Informática",
+    "url": "https://www.servicodeinformatica.com.br/",
+    "image": "https://www.servicodeinformatica.com.br/logo.jpg",
+    "email": "servicodeinfo@proton.me"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+  },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "https://www.servicodeinformatica.com.br/criacao-email-proton.html",
+    "serviceLocation": {
+      "@type": "VirtualLocation",
+      "url": "https://www.servicodeinformatica.com.br/"
+    }
+  }
+}
+</script>
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { cursor: crosshair; }
+
+  body {
+    background: #0d1117; /* Fundo escuro, remetendo a terminal/privacidade */
+    color: #c9d1d9;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Grade sutil de fundo estilo terminal */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(88, 166, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(88, 166, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .caos {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .bloco {
+    position: absolute;
+    line-height: 1.5;
+  }
+
+  /* Link de voltar no topo esquerdo */
+  .voltar {
+    left: 4vw;
+    top: 5vh;
+    font-size: 0.8rem;
+    color: #58a6ff;
+    text-decoration: none;
+    border-bottom: 1px dashed #58a6ff;
+    transform: rotate(-1deg);
+  }
+  .voltar::before { content: "< "; }
+  .voltar:hover { color: #fff; border-color: #fff; }
+
+  /* URL solta no topo */
+  .url {
+    right: 4vw;
+    top: 5vh;
+    font-size: 0.75rem;
+    color: #8b949e;
+    transform: rotate(1deg);
+  }
+
+  /* Título Principal (H1) — Quebrando o padrão visual */
+  .titulo {
+    left: 10vw;
+    top: 20vh;
+    font-size: clamp(1.8rem, 5vw, 4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #58a6ff; /* Azul Proton */
+    transform: rotate(1.5deg);
+    max-width: 80vw;
+    line-height: 1.1;
+    text-shadow: 2px 2px 0px #000;
+  }
+
+  .titulo span {
+    color: #8b949e;
+    display: block;
+    font-size: 0.5em;
+    text-transform: none;
+    margin-top: 0.5rem;
+    font-family: Georgia, serif;
+    font-style: italic;
+    text-shadow: none;
+  }
+
+  /* Linha de código decorativa */
+  .linha-codigo {
+    left: 10vw;
+    top: 40vh;
+    font-size: 0.9rem;
+    color: #3fb950; /* Verde terminal */
+    transform: rotate(-0.5deg);
+  }
+
+  /* Bloco de conteúdo textual */
+  .texto {
+    left: 10vw;
+    top: 48vh;
+    max-width: 60ch;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    color: #c9d1d9;
+    transform: rotate(-0.5deg);
+    line-height: 1.7;
+  }
+
+  .texto p { margin-bottom: 1rem; }
+
+  /* Destaque no texto */
+  .destaque {
+    background: #58a6ff;
+    color: #0d1117;
+    padding: 0 4px;
+    font-weight: bold;
+  }
+
+  /* Bloco de chamada para ação (CTA) — Discreto e torto */
+  .cta {
+    right: 10vw;
+    bottom: 15vh;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    transform: rotate(3deg);
+    background: #161b22;
+    border: 1px solid #30363d;
+    padding: 1rem;
+    max-width: 30ch;
+  }
+  .cta p {
+    margin-bottom: 0.5rem;
+    color: #8b949e;
+  }
+  .cta a {
+    color: #3fb950;
+    text-decoration: none;
+    border-bottom: 1px solid #3fb950;
+  }
+  .cta a::before { content: "> "; }
+  .cta a:hover { background: #3fb950; color: #0d1117; }
+
+  /* Elemento gráfico (olho ou chave, representando privacidade) */
+  .grafico {
+    left: 60vw;
+    top: 25vh;
+    font-size: 4rem;
+    color: #30363d;
+    transform: rotate(-15deg);
+    opacity: 0.5;
+    user-select: none;
+  }
+
+  /* Cursor piscante no final do texto */
+  .cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.1em;
+    background: #3fb950;
+    margin-left: 4px;
+    vertical-align: text-bottom;
+    animation: blink 1s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* Responsivo: Telemóveis */
+  @media (max-width: 700px) {
+    .bloco { position: relative; inset: auto; margin: 0 0 2rem 0; transform: none; }
+    .caos { padding: 2rem; display: flex; flex-direction: column; justify-content: center; min-height: 100vh; }
+    .grafico { display: none; }
+    .titulo { text-align: left; }
+    .texto { font-size: 1rem; }
+    .cta { border-left: 4px solid #58a6ff; border-top: none; border-right: none; border-bottom: none; background: transparent; padding-left: 1rem; }
+    .voltar { display: inline-block; margin-bottom: 1rem; }
+    .url { display: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="caos">
+
+    <a href="index.html" class="bloco voltar">voltar ao caos</a>
+
+    <div class="bloco url">servicodeinformatica.com.br/criacao-email-proton.html</div>
+
+    <!-- H1 Principal -->
+    <h1 class="bloco titulo">
+      Criação de Conta de E-mail
+      <span>O guia definitivo para o Proton Mail, feito para quem não é técnico.</span>
+    </h1>
+
+    <!-- Elemento gráfico decorativo -->
+    <div class="bloco grafico">🔒</div>
+
+    <!-- Linha de código decorativa -->
+    <div class="bloco linha-codigo">
+      [root@servico-informatica ~]# iniciar_protocolo_seguranca
+    </div>
+
+    <!-- Conteúdo real e otimizado para SEO -->
+    <div class="bloco texto">
+      <p>
+        Você não precisa ser um especialista em tecnologia para ter um e-mail seguro. Se você é <span class="destaque">leigo no assunto</span> e quer criar sua conta gratuita no <strong>Proton Mail</strong> sem dor de cabeça, eu te ajudo do zero.
+      </p>
+      <p>
+        O Proton Mail é um dos serviços de e-mail mais seguros e privados do mundo. Mas a interface pode parecer intimidadora na primeira vez. Eu te acompanho passo a passo, desde o download do aplicativo até a configuração da sua senha mestre e recuperação.
+      </p>
+      <p>
+        Atendimento remoto, paciência infinita e foco total em privacidade. Sem jargões complexos, sem pressa. Você sai com sua conta pronta, segura e funcionando.<span class="cursor"></span>
+      </p>
+    </div>
+
+    <!-- Chamada para ação (CTA) para entrar em contato -->
+    <div class="bloco cta">
+      <p>Pronto para ter um e-mail que é só seu?</p>
+      <a href="mailto:servicodeinfo@proton.me?subject=Quero%20ajuda%20para%20criar%20minha%20conta%20no%20Proton%20Mail">enviar e-mail</a>
+    </div>
+
+  </div>
+</body>
+</html>
