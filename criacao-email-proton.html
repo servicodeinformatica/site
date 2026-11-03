@@ -12,9 +12,9 @@
 <link rel="shortcut icon" href="favicon.ico">
 
 <!-- SEO básico agressivo -->
-<title>Criação de Conta de E-mail Proton Mail | Serviço de Informática</title>
-<meta name="description" content="Ajuda especializada para criar sua conta gratuita de e-mail no Proton Mail do zero. Atendimento passo a passo para pessoas leigas. Atendimento remoto em todo o Brasil.">
-<meta name="keywords" content="criação de conta de email, criar conta proton mail, ajuda proton mail, conta de email gratuita, segurança de email, proton mail passo a passo">
+<title>Criação de Conta Proton Mail | Ajuda Passo a Passo | Serviço de Informática</title>
+<meta name="description" content="Assessoria completa para criar sua conta gratuita no Proton Mail. Atendimento passo a passo para iniciantes, com foco em privacidade e segurança. Atendimento remoto no Brasil.">
+<meta name="keywords" content="criar conta proton mail, ajuda proton mail, conta de email segura, email criptografado, criação de email passo a passo, suporte proton mail">
 <meta name="author" content="Serviço de Informática">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="https://www.servicodeinformatica.com.br/criacao-email-proton.html">
@@ -22,16 +22,16 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.servicodeinformatica.com.br/criacao-email-proton.html">
-<meta property="og:title" content="Criação de Conta de E-mail Proton Mail | Serviço de Informática">
-<meta property="og:description" content="Ajuda passo a passo para criar sua conta gratuita no Proton Mail. Ideal para quem não entende de tecnologia.">
+<meta property="og:title" content="Criação de Conta Proton Mail | Ajuda Passo a Passo">
+<meta property="og:description" content="Assessoria completa para criar sua conta gratuita no Proton Mail. Ideal para iniciantes.">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Serviço de Informática">
 <meta property="og:image" content="https://www.servicodeinformatica.com.br/logo.jpg">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Criação de Conta de E-mail Proton Mail | Serviço de Informática">
-<meta name="twitter:description" content="Ajuda passo a passo para criar sua conta gratuita no Proton Mail.">
+<meta name="twitter:title" content="Criação de Conta Proton Mail | Ajuda Passo a Passo">
+<meta name="twitter:description" content="Assessoria completa para criar sua conta gratuita no Proton Mail.">
 <meta name="twitter:image" content="https://www.servicodeinformatica.com.br/logo.jpg">
 
 <!-- Dados estruturados: Service -->
@@ -41,7 +41,7 @@
   "@type": "Service",
   "serviceType": "Criação de Conta de E-mail",
   "name": "Criação de Conta de E-mail Proton Mail",
-  "description": "Ajuda especializada e passo a passo para criar uma conta gratuita de e-mail no Proton Mail, voltada para pessoas leigas.",
+  "description": "Assessoria completa e passo a passo para criar uma conta gratuita de e-mail no Proton Mail, voltada para pessoas leigas.",
   "provider": {
     "@type": "ProfessionalService",
     "name": "Serviço de Informática",
@@ -79,235 +79,330 @@
 </script>
 
 <style>
+  /* Reset e Estilos Globais */
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { cursor: crosshair; }
-
+  
   body {
-    background: #0d1117;
-    color: #c9d1d9;
-    font-family: 'Courier New', Courier, monospace;
-    min-height: 100vh;
-    overflow-x: hidden;
-    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
   }
 
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(88, 166, 255, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(88, 166, 255, 0.05) 1px, transparent 1px);
-    background-size: 30px 30px;
-    pointer-events: none;
-    z-index: 0;
+  /* Cabeçalho (Header) */
+  header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
 
-  .caos {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    min-height: 100vh;
-  }
-
-  .bloco {
-    position: absolute;
-    line-height: 1.5;
-  }
-
-  .voltar {
-    left: 4vw;
-    top: 5vh;
-    font-size: 0.8rem;
-    color: #58a6ff;
-    text-decoration: none;
-    border-bottom: 1px dashed #58a6ff;
-    transform: rotate(-1deg);
-  }
-  .voltar::before { content: "< "; }
-  .voltar:hover { color: #fff; border-color: #fff; }
-
-  /* Contatos no topo direito */
-  .contatos {
-    position: absolute;
-    right: 4vw;
-    top: 5vh;
+  .header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
     gap: 10px;
-    z-index: 3;
-  }
-
-  .email, .telegram {
-    font-family: 'Courier New', monospace;
-    font-size: 0.8rem;
-    color: #c9d1d9;
     text-decoration: none;
-    border-bottom: 1px dashed #58a6ff;
-    padding-bottom: 2px;
+    color: #111;
+    font-weight: 700;
+    font-size: 1.1rem;
   }
 
-  .email { transform: rotate(-2deg); }
-  .email::before { content: "✉ "; color: #58a6ff; }
-
-  .telegram { transform: rotate(1.5deg); }
-  .telegram::before { content: "✈ "; color: #0088cc; }
-
-  .email:hover, .telegram:hover { color: #fff; border-color: #fff; }
-
-  .titulo {
-    left: 10vw;
-    top: 20vh;
-    font-size: clamp(1.8rem, 5vw, 4rem);
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #58a6ff;
-    transform: rotate(1.5deg);
-    max-width: 80vw;
-    line-height: 1.1;
-    text-shadow: 2px 2px 0px #000;
+  .logo img {
+    max-height: 40px;
+    width: auto;
   }
 
-  .titulo span {
-    color: #8b949e;
-    display: block;
-    font-size: 0.5em;
-    text-transform: none;
-    margin-top: 0.5rem;
-    font-family: Georgia, serif;
-    font-style: italic;
-    text-shadow: none;
+  .contato-topo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
   }
 
-  .linha-codigo {
-    left: 10vw;
-    top: 40vh;
-    font-size: 0.9rem;
-    color: #3fb950;
-    transform: rotate(-0.5deg);
-  }
-
-  .texto {
-    left: 10vw;
-    top: 48vh;
-    max-width: 60ch;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-    color: #c9d1d9;
-    transform: rotate(-0.5deg);
-    line-height: 1.7;
-  }
-
-  .texto p { margin-bottom: 1rem; }
-
-  .destaque {
-    background: #58a6ff;
-    color: #0d1117;
-    padding: 0 4px;
-    font-weight: bold;
-  }
-
-  .cta {
-    right: 10vw;
-    bottom: 15vh;
-    font-family: 'Courier New', monospace;
-    font-size: 0.9rem;
-    transform: rotate(3deg);
-    background: #161b22;
-    border: 1px solid #30363d;
-    padding: 1rem;
-    max-width: 35ch;
-  }
-  .cta p {
-    margin-bottom: 0.5rem;
-    color: #8b949e;
-  }
-  .cta a {
-    color: #3fb950;
+  .btn-contato {
     text-decoration: none;
-    border-bottom: 1px solid #3fb950;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  .cta a::before { content: "> "; }
-  .cta a:hover { background: #3fb950; color: #0d1117; }
-
-  .grafico {
-    left: 60vw;
-    top: 25vh;
-    font-size: 4rem;
-    color: #30363d;
-    transform: rotate(-15deg);
-    opacity: 0.5;
-    user-select: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.3s;
   }
 
-  .cursor {
+  .btn-email {
+    color: #333;
+    border: 1px solid #ccc;
+  }
+  .btn-email:hover { background: #eee; }
+
+  .btn-telegram {
+    background-color: #0088cc;
+    color: #fff;
+  }
+  .btn-telegram:hover { background-color: #006699; }
+
+  /* Seção Hero (Destaque da Página de Serviço) */
+  .hero-servico {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); /* Gradiente chamativo para destacar o serviço */
+    /* Se preferir algo mais sóbrio, use: background-color: #1e3a8a; */
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .hero-servico-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero-servico h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .hero-servico p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 30px;
+    opacity: 0.9;
+  }
+
+  .btn-principal {
     display: inline-block;
-    width: 8px;
-    height: 1.1em;
-    background: #3fb950;
-    margin-left: 4px;
-    vertical-align: text-bottom;
-    animation: blink 1s steps(1) infinite;
+    background-color: #ffffff;
+    color: #1e3a8a;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   }
-  @keyframes blink { 50% { opacity: 0; } }
 
-  @media (max-width: 700px) {
-    .bloco { position: relative; inset: auto; margin: 0 0 2rem 0; transform: none; }
-    .caos { padding: 2rem; display: flex; flex-direction: column; justify-content: center; min-height: 100vh; }
-    .grafico { display: none; }
-    .titulo { text-align: left; }
-    .texto { font-size: 1rem; }
-    .cta { border-left: 4px solid #58a6ff; border-top: none; border-right: none; border-bottom: none; background: transparent; padding-left: 1rem; max-width: 100%; }
-    .voltar { display: inline-block; margin-bottom: 1rem; }
-    .contatos { position: relative; align-items: flex-start; right: auto; top: auto; margin-bottom: 1rem; }
-    .email, .telegram { display: inline-block; }
+  .btn-principal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+
+  /* Seção de Conteúdo */
+  .conteudo {
+    padding: 60px 20px;
+    background-color: #ffffff;
+  }
+
+  .conteudo-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .conteudo h2 {
+    font-size: 1.8rem;
+    color: #111;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  .conteudo h2:first-child {
+    margin-top: 0;
+  }
+
+  .conteudo p {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 20px;
+  }
+
+  .conteudo ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 1.05rem;
+  }
+
+  .conteudo li {
+    margin-bottom: 10px;
+  }
+
+  .destaque-box {
+    background-color: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .destaque-box p {
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #166534;
+  }
+
+  /* Seção de Contato Final (CTA) */
+  .cta-final {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+  }
+
+  .cta-final h2 {
+    font-size: 1.8rem;
+    color: #111;
+    margin-bottom: 15px;
+  }
+
+  .cta-final p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  .botoes-cta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .btn-acao {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .btn-acao-primario {
+    background-color: #0088cc;
+    color: #fff;
+  }
+  .btn-acao-primario:hover { background-color: #006699; }
+
+  .btn-acao-secundario {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+  .btn-acao-secundario:hover { background-color: #eee; }
+
+  /* Rodapé */
+  footer {
+    background-color: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+  }
+
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .hero-servico { padding: 50px 20px; }
+    .botoes-cta { flex-direction: column; }
+    .btn-acao { justify-content: center; }
   }
 </style>
 </head>
 <body>
-  <div class="caos">
 
-    <a href="index.html" class="bloco voltar">voltar ao caos</a>
-
-    <!-- Contatos agrupados no canto superior direito -->
-    <div class="bloco contatos">
-      <a href="mailto:servicodeinfo@proton.me" class="email">servicodeinfo@proton.me</a>
-      <a href="http://t.me/servicodeinformatica" target="_blank" rel="noopener noreferrer" class="telegram">t.me/servicodeinformatica</a>
+  <!-- Cabeçalho Fixo -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <img src="logo.jpg" alt="Serviço de Informática Logo">
+        Serviço de Informática
+      </a>
+      <div class="contato-topo">
+        <a href="mailto:servicodeinfo@proton.me" class="btn-contato btn-email">✉ E-mail</a>
+        <a href="http://t.me/servicodeinformatica" target="_blank" rel="noopener noreferrer" class="btn-contato btn-telegram">✈ Telegram</a>
+      </div>
     </div>
+  </header>
 
-    <h1 class="bloco titulo">
-      Criação de Conta de E-mail
-      <span>O guia definitivo para o Proton Mail, feito para quem não é técnico.</span>
-    </h1>
-
-    <div class="bloco grafico">🔒</div>
-
-    <div class="bloco linha-codigo">
-      [root@servico-informatica ~]# iniciar_protocolo_seguranca
+  <!-- Seção Hero do Serviço -->
+  <section class="hero-servico">
+    <div class="hero-servico-container">
+      <h1>Crie seu e-mail seguro no Proton Mail sem dor de cabeça.</h1>
+      <p>Se você é leigo no assunto e quer um e-mail privado e criptografado, eu te ajudo do zero, passo a passo, com paciência e clareza.</p>
+      <a href="#contato" class="btn-principal">Quero ajuda para criar minha conta</a>
     </div>
+  </section>
 
-    <div class="bloco texto">
-      <p>
-        Você não precisa ser um especialista em tecnologia para ter um e-mail seguro. Se você é <span class="destaque">leigo no assunto</span> e quer criar sua conta gratuita no <strong>Proton Mail</strong> sem dor de cabeça, eu te ajudo do zero.
-      </p>
-      <p>
-        O Proton Mail é um dos serviços de e-mail mais seguros e privados do mundo. Mas a interface pode parecer intimidadora na primeira vez. Eu te acompanho passo a passo, desde o download do aplicativo até a configuração da sua senha mestre e recuperação.
-      </p>
-      <p>
-        Atendimento remoto, paciência infinita e foco total em privacidade. Sem jargões complexos, sem pressa. Você sai com sua conta pronta, segura e funcionando.<span class="cursor"></span>
-      </p>
+  <!-- Conteúdo do Serviço -->
+  <section class="conteudo">
+    <div class="conteudo-container">
+      <h2>Por que usar o Proton Mail?</h2>
+      <p>O Proton Mail é um dos serviços de e-mail mais seguros do mundo. Diferente do Gmail ou Outlook, seus e-mails são criptografados de ponta a ponta, o que significa que nem o próprio provedor consegue ler o que você escreve.</p>
+      <p>Ideal para quem se preocupa com privacidade, para profissionais liberais e para qualquer pessoa que queira manter sua vida digital longe de olhares curiosos.</p>
+
+      <div class="destaque-box">
+        <p>💡 O Proton Mail é gratuito e sua conta pode ser criada sem cartão de crédito.</p>
+      </div>
+
+      <h2>Como funciona meu serviço?</h2>
+      <p>Eu não vou apenas te mandar um link. Eu sento "virtualmente" ao seu lado e te guio em cada etapa:</p>
+      <ul>
+        <li><strong>1. Escolha do endereço:</strong> Ajuda para criar um e-mail profissional ou pessoal que faça sentido para você.</li>
+        <li><strong>2. Criação da conta:</strong> Passo a passo para preencher o formulário sem erros e sem travar.</li>
+        <li><strong>3. Configuração da senha mestre:</strong> A senha mais importante da sua vida digital, configurada com segurança.</li>
+        <li><strong>4. Recuperação de conta:</strong> Configuramos um e-mail de recuperação para que você nunca perca o acesso.</li>
+        <li><strong>5. Primeiros passos:</strong> Instalação do aplicativo no celular (iOS ou Android) e envio do primeiro e-mail.</li>
+      </ul>
+
+      <h2>Para quem é este serviço?</h2>
+      <p>Para pessoas que:</p>
+      <ul>
+        <li>Não têm paciência ou habilidade com tecnologia e se perdem com formulários.</li>
+        <li>Já tentaram criar a conta sozinhas e ficaram confusas com a interface.</li>
+        <li>Querem garantir que a conta seja configurada corretamente para não perderem o acesso no futuro.</li>
+        <li>Buscam um e-mail mais seguro do que os tradicionais (Gmail, Hotmail, Yahoo).</li>
+      </ul>
     </div>
+  </section>
 
-    <div class="bloco cta">
-      <p>Pronto para ter um e-mail que é só seu?</p>
-      <a href="mailto:servicodeinfo@proton.me?subject=Quero%20ajuda%20para%20criar%20minha%20conta%20no%20Proton%20Mail">enviar e-mail</a>
-      <a href="http://t.me/servicodeinformatica" target="_blank" rel="noopener noreferrer">chamar no telegram</a>
+  <!-- Seção de Contato Final -->
+  <section class="cta-final" id="contato">
+    <div class="conteudo-container">
+      <h2>Vamos criar sua conta segura?</h2>
+      <p>Escolha a forma de contato que preferir. Respondo rápido e sem enrolação.</p>
+      <div class="botoes-cta">
+        <a href="mailto:servicodeinfo@proton.me?subject=Quero%20ajuda%20para%20criar%20minha%20conta%20no%20Proton%20Mail" class="btn-acao btn-acao-primario">
+          ✉ Enviar e-mail
+        </a>
+        <a href="http://t.me/servicodeinformatica" target="_blank" rel="noopener noreferrer" class="btn-acao btn-acao-secundario">
+          ✈ Chamar no Telegram
+        </a>
+      </div>
     </div>
+  </section>
 
-  </div>
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2026 Serviço de Informática. Todos os direitos reservados.</p>
+    <p>Atendimento em todo o Brasil | <a href="mailto:servicodeinfo@proton.me">servicodeinfo@proton.me</a></p>
+  </footer>
+
 </body>
 </html>
